@@ -11,8 +11,10 @@ end
   def latest_title
   response = Net::HTTP.get @url
   doc = Hpricot response 
- 
-end
+  doc.search("/html/body/div[2]/div/div[2]/div/div/h3")
+  (doc/"/html/body/div[2]/div/div[2]/div/div/h3").inner_html
+ end
+
 
 
 # ShortcutNet

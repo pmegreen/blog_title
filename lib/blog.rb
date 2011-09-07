@@ -3,13 +3,18 @@
 #
 
 class Blog
-  def initialize url 
-  
 
-uri = URI.parse("http://rorcourse.tumblr.com/")
+  def initialize url 
+  @url = URI.parse url
+end
+
+  def latest_title
+  response = Net::HTTP.get @url
+  doc = Hpricot response 
+ 
+end
+
 
 # ShortcutNet
-response = Net::HTTP.get_response(uri)
-end
-binding.pry
 
+end

@@ -1,7 +1,6 @@
 #
 # Create your "Blog" class in this file.
 #
-require 'pry'
 
 class Blog
   def initialize url 
